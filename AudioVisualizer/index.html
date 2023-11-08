@@ -14,12 +14,14 @@
 
     <!-- controls for dj sliders -->
     <div id="sliders">
-        <section>
-            Treble Gain: <input type="range" id="slider-treble" min="0" max="20" value="0" step="1">
+        <section class="slider_trebel">
+            <p>Treble Gain:</p>
+            <input type="range" id="slider-treble" min="0" max="20" value="0" step="1" class="vert_slider">
             <span id="label-treble"></span>
         </section>
-        <section>
-            Bass Gain: <input type="range" id="slider-bass" min="0" max="10" value="0" step="1">
+        <section class="slider_bass">
+            <p>Bass Gain:</p>
+            <input type="range" orient="vertical" id="slider-bass" min="0" max="10" value="0" step="1" class="vert_slider">
             <span id="label-bass"></span>
         </section>
     </div>
@@ -31,7 +33,7 @@
         </div>
         <div id="controls-2">
             <section>
-                Volume: <input type="range" id="slider-volume" min="0" max="2" value="1" step="0.01">
+                Volume: <input type="range" id="slider-volume" min="0" max="2" value="1" step="0.01" class="vol_slider">
                 <span id="label-volume"></span>
             </section>
         </div>
@@ -64,6 +66,12 @@
                   <option value="bars">Bars</option>
                   <option value="lines">Lines</option>
                 </select>
+            </label>
+        </div>
+        <div id="chooser">
+            <label>
+                Upload Custom MP3:
+                <input type="file" id="upload" title="Upload File"/>
             </label>
         </div>
     </div>

@@ -1,3 +1,5 @@
+/* main body styling */
+
 body {
     background: #000000;
     font-family: tahoma, verdana, sans serif;
@@ -14,6 +16,7 @@ canvas {
     border: 2px solid white;
 }
 
+/* control panel styling */
 #instructions{
     text-align: center;
 }
@@ -27,6 +30,8 @@ canvas {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 8vh;
 
     display: flex;
     flex-direction: row;
@@ -37,12 +42,78 @@ canvas {
 #sliders{
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 2vh;
     width: 600px;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
 }
 
+/* slider specific styling */
+
+/* trebel and bass sliders */
+section.slider_trebel, section.slider_bass{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+input.vert_slider::-webkit-slider-thumb{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: grey; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+input.vert_slider::-moz-range-thumb{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: grey; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+input.vert_slider{
+    -webkit-appearance: none;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);-o-transform:rotate(90deg);
+    transform:rotate(270deg);
+    height: 10px;
+
+    margin-top: 6vh;
+    margin-bottom: 7vh;
+}
+
+/* volume slider */
+input.vol_slider{
+    -webkit-appearance: none;
+    height: 10px;
+}
+
+input.vol_slider::-webkit-slider-thumb{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: grey; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+input.vol_slider::-moz-range-thumb{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: grey; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* core controls styling */
 #core-controls{
     
     display: flex;
@@ -52,6 +123,7 @@ canvas {
     width: 500px;
 }
 
+/* additional options styling */
 #options{
     
     display: flex;
@@ -68,10 +140,23 @@ canvas {
 section{
     margin-bottom: 1rem;
 }
-  
-#playButton{
-    font-size: 1.2rem;
-    width: 6rem;
+
+/* specific button styling */
+
+#btn-play{
+    font-size: 1rem;
+    width: 5rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+#btn-fs{
+    font-size: 1rem;
+    width: 8rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-align: center;
 }
   
 button[data-playing="yes"]:after{
@@ -81,8 +166,18 @@ button[data-playing="yes"]:after{
 button[data-playing="no"]:after{
     content: "Play";
 }
-  
-#fsButton{
-    font-size: 1.2rem;
-    width: 8rem;
+
+/* specific dropdown styling */
+
+#vis-select, #track-select, #draw-select{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#chooser{
+    margin-left: 5vw;
 }

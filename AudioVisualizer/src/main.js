@@ -130,6 +130,12 @@ const setupUI = (canvasElement) =>{
     bassLabel.innerHTML = Math.round(e.target.value);
   };
   bassSlider.dispatchEvent(new Event("input"));
+
+  // hook up custom upload input
+  document.querySelector("#upload").onchange = (e) => {
+		const files = e.target.files;
+    audio.loadSoundFile(URL.createObjectURL(files[0]))
+	};
 	
 }
 
